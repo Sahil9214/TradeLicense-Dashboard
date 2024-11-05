@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Login from "../Pages/Login/Login";
+import LoginPage from "../Pages/Login/Login";
 import LoadingPage from "../Pages/Loader/LoadingPage";
 import { useState, useEffect } from "react";
 import Dashboard from "../Pages/Dashboard/Dashboard";
@@ -16,8 +16,8 @@ function AllRouter() {
 
   return (
     <Routes>
-      <Route path="/" element={loading ? <LoadingPage /> : <Login />} />
-      <Route path="/" element={<Dashboard />} />
+      <Route path="/" element={loading ? <LoadingPage /> : <LoginPage />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );
 }
